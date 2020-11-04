@@ -15,23 +15,13 @@ const quizQuestions = [
   },
   {
     question: "Which one of these is JavaScript?",
-    answers: {
-      a: "Padding",
-      b: "innerHTML",
-      c: "text-decoration",
-      d: "body"
-    },
-    correctAnswer: "b"
+    answers: ["Padding", "innerHTML", "text-decoration", "body"],
+    correctAnswer: "innerHTML"
   },
   {
     question: "What is BootStrap?",
-    answers: {
-      a: "shoelaces",
-      b: "styling library",
-      c: "JavaScript element",
-      d: "Element Id"
-    },
-    correctAnswer: "b"
+    answers: ["shoelaces", "styling library", "JavaScript element", "Element Id"],
+    correctAnswer: "styling library"
   },
   {
     question: "Which of these statements are true?",
