@@ -25,23 +25,13 @@ const quizQuestions = [
   },
   {
     question: "Which of these statements are true?",
-    answers: {
-      a: "alerts, prompts, confirms are String Concatentations. ",
-      b: "CamelCase is frequently used in JavaScript",
-      c: "VS Code let the users tab to code.",
-      d: "Coding is fueled by magic."
-    },
-    correctAnswer: "b"
+    answers: ["alerts, prompts, confirms are String Concatentations. ", "CamelCase is frequently used in JavaScript", "VS Code let the users tab to code.", "Coding is fueled by magic."],
+    correctAnswer: "CamelCase is frequently used in JavaScript"
   },
   {
     question: "An Array is...",
-    answers: {
-      a: "to collect Data.",
-      b: "a variable.",
-      c: "to run an action.",
-      d: "to run afar."
-    },
-    correctAnswer: "a"
+    answers: ["to collect Data.", "a variable.", "to run an action.", "to run afar."],
+    correctAnswer: "to collect Data."
   }
 ]
 
@@ -63,3 +53,13 @@ function displayQuestion() {
 }
 displayQuestion()
 
+function time() {
+  let sec = 30;
+  time = setInterval(function () {
+    document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
+    sec--;
+    if (sec < 0) {
+      clearInterval(timer);
+    }
+  }, 1000);
+}

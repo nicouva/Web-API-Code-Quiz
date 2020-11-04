@@ -1,0 +1,82 @@
+#{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: cadetblue;
+}
+
+.start-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.start-btn button{
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+  padding: 15px 30px;
+  outline: none;
+  border: none
+}
+.info-box{
+  display: none;
+  width: 540px;
+  background: lightgrey;
+  border-radius: 5px;
+}
+
+.info-box .info-title{
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid slategray;
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.info-box .info-list{
+  padding: 15px 35px;
+}
+.info-box .info-list .info {
+  margin: 5px 0;
+  font-size: 17px;
+}
+
+.info-box .info-list .info span{
+  font-weight: 700;
+  color: #007bff;
+}
+
+.info-box .buttons{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 35px;
+  border-top: 1px solid slategray;
+}
+
+.info-box .buttons button{
+  margin: 0 5px;
+  height: 40px;
+  width: 100px;
+  border: 1px solid #007bff;
+  background: #007bff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.buttons button.restart{
+  color: #fff;
+  background: #007bff;
+}
+.buttons button.quit{
+  color: #007bff;
+  border-color: #007bff;
+}
