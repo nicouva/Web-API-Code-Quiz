@@ -3,8 +3,8 @@ const resultsContainer = document.getElementById('results')
 const submit = document.getElementById('submit')
 const questionText = document.getElementById('question')
 const answers = document.getElementsByClassName('answers')
+const startButton = document.getElementById('start-btn')
 const score = 0
-const timer = 30
 let currentQuestNumber = 0
 
 const quizQuestions = [
@@ -15,25 +15,53 @@ const quizQuestions = [
   },
   {
     question: "Which one of these is JavaScript?",
-    answers: ["Padding", "innerHTML", "text-decoration", "body"],
+    choices: ["Padding", "innerHTML", "text-decoration", "body"],
     correctAnswer: "innerHTML"
   },
   {
     question: "What is BootStrap?",
-    answers: ["shoelaces", "styling library", "JavaScript element", "Element Id"],
+    choices: ["shoelaces", "styling library", "JavaScript element", "Element Id"],
     correctAnswer: "styling library"
   },
   {
     question: "Which of these statements are true?",
-    answers: ["alerts, prompts, confirms are String Concatentations. ", "CamelCase is frequently used in JavaScript", "VS Code let the users tab to code.", "Coding is fueled by magic."],
+    choices: ["alerts, prompts, confirms are String Concatentations. ", "CamelCase is frequently used in JavaScript", "VS Code let the users tab to code.", "Coding is fueled by magic."],
     correctAnswer: "CamelCase is frequently used in JavaScript"
   },
   {
     question: "An Array is...",
-    answers: ["to collect Data.", "a variable.", "to run an action.", "to run afar."],
+    choices: ["to collect Data.", "a variable.", "to run an action.", "to run afar."],
     correctAnswer: "to collect Data."
   }
+  {
+    question: "Which of the following function of String object combines the text of two?",
+    choices: ["add()", "merge()", "append()"],
+    correctAnswer: "concat()"
+  }
+  {
+    question: "Under which tags do you write JavaScript under?",
+    choices: ["div", "style", "input type"],
+    correctAnswer: "script"
+  }
+  {
+    question: "What's the symbol to assign value to a variable?",
+    choices: ["#", "%", "+"],
+    correctAnswer: "="
+  }
+  {
+    question: "Please describe 'parseInt'.",
+    choices: ["to listen for an event to be actioned", "to create a string of text", "to determine whether a variable is true or false"],
+    correctAnswer: "to convert string into numbers."
+  }
+  {
+    question: "How do you call myFunction?",
+    choices: ["function myFunction", "Come here, myFunction!", "()"],
+    correctAnswer: "myFunction()"
+  }
 ]
+
+startButton.addEventListener('click', time)
+
 
 function displayQuestion() {
   let currentQuestion = quizQuestions[currentQuestNumber]
@@ -47,20 +75,22 @@ function displayQuestion() {
         console.log('Correct Answer')
       } else { console.log('Wrong Answer') }
       currentQuestNumber += 1
-      displayQuestion
+      displayQuestion()
     })
   }
 }
-displayQuestion()
+
 
 function time() {
   let sec = 30;
-  time = setInterval(function () {
+  let timer = setInterval(function () {
     document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
     sec--;
     if (sec < 0) {
-      clearInterval(timer);
+      clearInterval(timer)
     }
   }, 1000);
+  displayQuestion()
 }
-time()
+
+
