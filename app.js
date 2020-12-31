@@ -32,27 +32,27 @@ const quizQuestions = [
     question: "An Array is...",
     choices: ["to collect Data.", "a variable.", "to run an action.", "to run afar."],
     correctAnswer: "to collect Data."
-  }
+  },
   {
     question: "Which of the following function of String object combines the text of two?",
     choices: ["add()", "merge()", "append()"],
     correctAnswer: "concat()"
-  }
+  },
   {
     question: "Under which tags do you write JavaScript under?",
     choices: ["div", "style", "input type"],
     correctAnswer: "script"
-  }
+  },
   {
     question: "What's the symbol to assign value to a variable?",
     choices: ["#", "%", "+"],
     correctAnswer: "="
-  }
+  },
   {
     question: "Please describe 'parseInt'.",
     choices: ["to listen for an event to be actioned", "to create a string of text", "to determine whether a variable is true or false"],
     correctAnswer: "to convert string into numbers."
-  }
+  },
   {
     question: "How do you call myFunction?",
     choices: ["function myFunction", "Come here, myFunction!", "()"],
