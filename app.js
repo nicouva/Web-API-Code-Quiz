@@ -80,6 +80,9 @@ function displayQuestion() {
   }
 }
 
+function quizEnd () {
+  
+}
 
 function time() {
   let sec = 30;
@@ -92,5 +95,3 @@ function time() {
   }, 1000);
   displayQuestion()
 }
-
-
